@@ -2,14 +2,17 @@
 Codeshare for GRHS TSA Webmaster team 2023-2024
 
 
-Jobs- 
+Jobs
 
-Programming ======================================== \n
-Emilio
+Programming 
+===============================================================================
+Emilio &
 Ethan
-Research and Info ================================== \n
-Justin
+
+Research and Info 
+===============================================================================
+Justin &
 Daphne
 
-
-Important deadlines n' stuff =======================
+Important deadlines n' stuff
+===============================================================================
