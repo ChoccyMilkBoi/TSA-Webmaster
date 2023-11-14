@@ -15,7 +15,8 @@ section {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100%);
-    transition: all 1s;
+/* Add in to make the animation have the content slide in instead of fade in */
+    transition: all 1.5s;
 }
 @media(prefers-reduced-motion) {
     .hidden {
@@ -26,6 +27,9 @@ section {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+/* Add this in to have the animation to be undone,
+ uncomment this with .hidden classes comment out */
+
 }
 .pictures {
     display: flex;
@@ -38,4 +42,16 @@ section {
 }
 .logo:nth-child(4) {
     transition-delay: 600ms;
+}
+#content-zone-1 {
+    color: dodgerblue;
+    background-color: midnightblue;
+}
+#content-zone-2 {
+    color: #9749ff;
+    background-color: #9d1dff;
+}
+#content-zone-3 {
+    color: #ff25be;
+    background-color: #ff5fb8;
 }
