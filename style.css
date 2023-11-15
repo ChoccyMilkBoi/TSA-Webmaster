@@ -5,11 +5,12 @@ body {
     padding: 0;
     margin: 0;
 }
+
 section {
     display: grid;
     place-items:center;
     align-content: center;
-    min-height: 100vh;
+    min-height: 101vh;
 }
 .hidden {
     opacity: 0;
@@ -38,4 +39,19 @@ section {
 }
 .logo:nth-child(4) {
     transition-delay: 600ms;
+}
+#page1 {
+    background-color: dodgerblue;
+}
+#page2 {
+    background-color: #16ff1f;
+}
+#page3 {
+    background-color: #d5ff1e;
+}
+#page4 {
+    background-color: #ffba41;
+}
+#page5 {
+    background-color: maroon;
 }
