@@ -15,9 +15,8 @@ window.addEventListener("resize", setScrollVar)
 
 function setScrollVar() {
     const htmlElement = document.documentElement
-    const percentOfScreenHeightScroll = htmlElement.scrollTop / htmlElement.clientHeight
+        const percentOfScreenHeightScroll = htmlElement.scrollTop / htmlElement.clientHeight
     console.log(Math.min (percentOfScreenHeightScroll * 100 , 100))
-    htmlElement.clientHeight
     htmlElement.style.setProperty("--scroll", Math.min (percentOfScreenHeightScroll * 100 , 100))
 }
 setScrollVar()
