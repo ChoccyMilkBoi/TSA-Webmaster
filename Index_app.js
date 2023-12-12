@@ -1,22 +1,37 @@
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
-    });
-});
-const hiddenElements = document.querySelectorAll('.hidden')
-hiddenElements.forEach((el) => observer.observe(el));
 window.addEventListener("scroll", setScrollVar)
 window.addEventListener("resize", setScrollVar)
 
 function setScrollVar() {
     const htmlElement = document.documentElement
-        const percentOfScreenHeightScroll = htmlElement.scrollTop / htmlElement.clientHeight
-    console.log(Math.min (percentOfScreenHeightScroll * 100 , 100))
-    htmlElement.style.setProperty("--scroll", Math.min (percentOfScreenHeightScroll * 100 , 100))
+    const percentOfScreenHeightScrolled =
+        htmlElement.scrollTop / htmlElement.clientHeight
+    console.log(Math.min(percentOfScreenHeightScrolled * 100, 100))
+    htmlElement.style.setProperty(
+        "--scroll",
+        Math.min(percentOfScreenHeightScrolled * 100, 100)
+    )
 }
+
 setScrollVar()
+
+const observer = new IntersectionObserver(entries => {
+    for (let i = entries.length - 1; i >= 0; i--) {
+        const entry = entries[i]
+        if (entry.isIntersecting) {
+            document.querySelectorAll("[data-img]").forEach(img => {
+                img.classList.remove("show")
+            })
+            const img = document.querySelector(entry.target.dataset.imgToShow)
+            img?.classList.add("show")
+            break
+        }
+    }
+})
+
+document.querySelectorAll("[data-img-to-show]").forEach(section => {
+    observer.observe(section)
+})
+
+
+
+

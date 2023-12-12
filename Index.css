@@ -1,4 +1,4 @@
-body {
+{
     background: #131316;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
@@ -10,61 +10,7 @@ section {
     display: grid;
     place-items:center;
     align-content: center;
-    min-height: 101vh;
 }
-
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1s;
-}
-@media(prefers-reduced-motion) {
-    .hidden {
-        transition: none;
-    }
-}
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
-.pictures {
-    display: flex;
-}
-.logo:nth-child(2) {
-    transition-delay: 200ms;
-}
-.logo:nth-child(3) {
-    transition-delay: 400ms;
-}
-.logo:nth-child(4) {
-    transition-delay: 600ms;
-}
-#page1 {
-    background-color: dodgerblue;
-}
-#page2 {
-    background-color: #16ff1f;
-}
-#page3 {
-    background-color: #d5ff1e;
-}
-#page4 {
-    background-color: #ffba41;
-}
-#page5 {
-    background-color: maroon;
-}
-.wave1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
 .wave1 svg {
     position: relative;
     display: block;
@@ -89,16 +35,31 @@ section {
     font-size: 16px;
     background-color: mediumblue;
 }
-:root {
-    --scroll: 0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
-.top-section{
-    position:sticky;
-    top: 0;
-    translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 /75);
-    /*(oldval - oldmin) * newRange / oldRange + newMin*/
-    --background-opacity: calc(-1% * min(var(--scroll), 50) * 100 / 50);
+
+body {
+    margin: 0;
+    color: #141616;
+    background-color: #e6e9ea;
+    font-size: 28px;
 }
+
+h1 {
+    font-size: 110px;
+    margin-bottom: 1rem;
+}
+
+.full-screen-section {
+    height: 100vh;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
 .top-section .left,
 .top-section .right {
     flex-basis: 0;
@@ -106,23 +67,120 @@ section {
     padding: 1rem;
     padding-left: 3rem;
 }
+
 .top-section {
-      display: flex;
-      text-align: center;
-      padding: 0;
+    display: flex;
+    text-align: start;
+    padding: 0;
 }
+
 .top-section .left {
     background-color: rgb(248, 250, 249, var(--background-opacity));
 }
+
 .top-section .right {
     background: linear-gradient(
-    210.65deg,
-    rgb(152, 157, 157, var(--background-opacity)) 0%,
-    rgb(189, 194, 194, var(--background-opacity)) 100%
+            210.65deg,
+            rgb(152, 157, 157, var(--background-opacity)) 0%,
+            rgb(189, 194, 194, var(--background-opacity)) 100%
     );
 }
+
 @media (width <= 1000px) {
     .top-section .right {
         display: none;
     }
+
+    .top-section .left {
+        text-align: center;
+    }
+
+    body {
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 72px;
+    }
+
+    .imgs > .top-section-img {
+        width: 100vw;
+    }
+}
+
+:root {
+    --scroll: 0;
+}
+
+.top-section {
+    position: sticky;
+    top: 0;
+    align-content: center;
+    /* (oldVal - oldMin) * newRange / oldRange + newMin */
+    translate: 0 calc(-0.75% * (max(var(--scroll), 25) - 25) * 100 / 75);
+    --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
+}
+
+.first-main-section {
+    padding-top: 1vh;
+    position: sticky;
+    top: 0;
+    /* (oldVal - oldMin) * newRange / oldRange + newMin */
+    translate: 0 calc(-1.5% * (max(var(--scroll), 25) - 25) * 100 / 75);
+    --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
+}
+.second-main-section{
+    padding-top: 10vh;
+    position: sticky;
+    top: 200vh;
+    /* (oldVal - oldMin) * newRange / oldRange + newMin */
+    translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);
+    --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
+}
+
+.imgs > * {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    z-index: 10;
+    translate: 0 100%;
+    transition: translate 250ms ease-in-out;
+}
+
+[data-img-to-show] {
+    position: absolute;
+    top: 20%;
+}
+
+.imgs > .show {
+    translate: 0 0;
+}
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+/* Main content */
+.main {
+    margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
