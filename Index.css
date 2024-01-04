@@ -1,10 +1,10 @@
 {
     background: #131316;
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    padding: 0;
-    margin: 0;
-}
+        color: #ffffff;
+        font-family: 'Poppins', sans-serif;
+        padding: 0;
+        margin: 0;
+    }
 
 section {
     display: grid;
@@ -122,17 +122,25 @@ h1 {
 }
 
 .first-main-section {
-    padding-top: 1vh;
+    padding-top: 10vh;
     position: sticky;
     top: 0;
     /* (oldVal - oldMin) * newRange / oldRange + newMin */
     translate: 0 calc(-1.5% * (max(var(--scroll), 25) - 25) * 100 / 75);
     --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
 }
-.second-main-section{
+.second-main-section {
     padding-top: 10vh;
     position: sticky;
-    top: 200vh;
+    top: 100vh;
+    /* (oldVal - oldMin) * newRange / oldRange + newMin */
+    translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);
+    --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
+}
+.third-main-section {
+    padding-top: 10vh;
+    position: sticky;
+    top: 0;
     /* (oldVal - oldMin) * newRange / oldRange + newMin */
     translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);
     --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
@@ -157,11 +165,12 @@ h1 {
 }
 /* The navigation bar */
 .navbar {
-    overflow: hidden;
+    overflow: visible;
     background-color: #333;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
+    z-index: 999;
 }
 
 /* Links inside the navbar */
@@ -172,15 +181,37 @@ h1 {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    z-index: 999;
 }
 
 /* Change background on mouse-over */
 .navbar a:hover {
     background: #ddd;
     color: black;
+    z-index: 999;
 }
 
 /* Main content */
 .main {
+    width: 100vw;
     margin-top: 30px; /* Add a top margin to avoid content overlay */
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+.left-content {
+    justify-content: left;
+    background-color: orangered;
+    z-index: 2;
+}
+.right-content {
+    justify-content: right;
+    background-color: dodgerblue;
+    z-index: 2;
+}
+.center-content {
+    justify-content: center;
+    background-color: darkgreen;
+    z-index: 1;
+    flex-grow: 1.5;
 }

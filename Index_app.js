@@ -33,5 +33,3 @@ document.querySelectorAll("[data-img-to-show]").forEach(section => {
 })
 
 
-
-
