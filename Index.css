@@ -1,217 +1,134 @@
-{
-    background: #131316;
-        color: #ffffff;
-        font-family: 'Poppins', sans-serif;
-        padding: 0;
-        margin: 0;
-    }
-
-section {
-    display: grid;
-    place-items:center;
-    align-content: center;
-}
-.wave1 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 100px;
-}
-
-.wave1 .shape-fill {
-    fill: #4A90E2;
-}
-.hover_Mouse {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-.rounded_Button {
-    border-radius: 12px;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    background-color: mediumblue;
-}
-*,
-*::before,
-*::after {
+* {
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    color: #141616;
-    background-color: #e6e9ea;
-    font-size: 28px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Georgia, sans-serif ;
+}
+
+/* Center website */
+.main {
+    margin: auto auto auto 10vw; /* Same width as the sidebar + left position in px */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    max-width: 900vw;
+
 }
 
 h1 {
-    font-size: 110px;
-    margin-bottom: 1rem;
+    font-size: 50px;
+    word-break: break-all;
 }
 
-.full-screen-section {
-    height: 100vh;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
+.row {
+    margin: 8px -16px;
 }
 
-.top-section .left,
-.top-section .right {
-    flex-basis: 0;
-    flex-grow: 1;
-    padding: 1rem;
-    padding-left: 3rem;
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+    padding: 8px;
 }
 
-.top-section {
-    display: flex;
-    text-align: start;
-    padding: 0;
-}
-
-.top-section .left {
-    background-color: rgb(248, 250, 249, var(--background-opacity));
-}
-
-.top-section .right {
-    background: linear-gradient(
-            210.65deg,
-            rgb(152, 157, 157, var(--background-opacity)) 0%,
-            rgb(189, 194, 194, var(--background-opacity)) 100%
-    );
-}
-
-@media (width <= 1000px) {
-    .top-section .right {
-        display: none;
-    }
-
-    .top-section .left {
-        text-align: center;
-    }
-
-    body {
-        font-size: 24px;
-    }
-
-    h1 {
-        font-size: 72px;
-    }
-
-    .imgs > .top-section-img {
-        width: 100vw;
-    }
-}
-
-:root {
-    --scroll: 0;
-}
-
-.top-section {
-    position: sticky;
-    top: 0;
-    align-content: center;
-    /* (oldVal - oldMin) * newRange / oldRange + newMin */
-    translate: 0 calc(-0.75% * (max(var(--scroll), 25) - 25) * 100 / 75);
-    --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
-}
-
-.first-main-section {
-    padding-top: 10vh;
-    position: sticky;
-    top: 0;
-    /* (oldVal - oldMin) * newRange / oldRange + newMin */
-    translate: 0 calc(-1.5% * (max(var(--scroll), 25) - 25) * 100 / 75);
-    --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
-}
-.second-main-section {
-    padding-top: 10vh;
-    position: sticky;
-    top: 100vh;
-    /* (oldVal - oldMin) * newRange / oldRange + newMin */
-    translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);
-    --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
-}
-.third-main-section {
-    padding-top: 10vh;
-    position: sticky;
-    top: 0;
-    /* (oldVal - oldMin) * newRange / oldRange + newMin */
-    translate: 0 calc(-1% * (max(var(--scroll), 25) - 25) * 100 / 75);
-    --background-opacity: calc(100% - 1% * min(var(--scroll), 30) * 100 / 30);
-}
-
-.imgs > * {
-    position: fixed;
-    width: 100vw;
-    bottom: 0;
-    z-index: 10;
-    translate: 0 100%;
-    transition: translate 250ms ease-in-out;
-}
-
-[data-img-to-show] {
-    position: absolute;
-    top: 20%;
-}
-
-.imgs > .show {
-    translate: 0 0;
-}
-/* The navigation bar */
-.navbar {
-    overflow: visible;
-    background-color: #333;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    z-index: 999;
-}
-
-/* Links inside the navbar */
-.navbar a {
+/* Create four equal columns that floats next to each other */
+.column {
     float: left;
-    display: block;
-    color: #f2f2f2;
+    width: 25%;
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 9999px) {
+    .column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.yapping {
+
+}
+
+.special-button{
+    display: inline-block;
+    padding: 5px;
+    font-size: 24px;
+    cursor: pointer;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
-    z-index: 999;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
 }
 
-/* Change background on mouse-over */
-.navbar a:hover {
-    background: #ddd;
-    color: black;
-    z-index: 999;
+.special-button:hover {background-color: #3e8e41}
+
+.special-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
-/* Main content */
-.main {
-    width: 100vw;
-    margin-top: 30px; /* Add a top margin to avoid content overlay */
-    display: flex;
-    overflow: hidden;
-    justify-content: center;
-}
-.left-content {
-    justify-content: left;
-    background-color: orangered;
-    z-index: 2;
-}
-.right-content {
-    justify-content: right;
-    background-color: dodgerblue;
-    z-index: 2;
-}
-.center-content {
-    justify-content: center;
-    background-color: darkgreen;
+.sidenav {
+    height: 100%;
+    width: 10vw;
+    position: fixed;
     z-index: 1;
-    flex-grow: 1.5;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.custom-button {
+    margin-left: 0.5vw;
+    background-color: lightgreen; /* Green */
+    border: 1px solid green;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    width: 9vw;
+    display: block;
 }
