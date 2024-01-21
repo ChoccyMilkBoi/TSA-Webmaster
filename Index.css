@@ -3,9 +3,9 @@
 }
 
 body {
-    background-color: #f1f1f1;
+    background-color: #ddffd0;
     padding: 20px;
-    font-family: Georgia, sans-serif ;
+    font-family: Helvetica, sans-serif ;
 }
 
 /* Center website */
@@ -13,7 +13,7 @@ body {
     margin: auto auto auto 10vw; /* Same width as the sidebar + left position in px */
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
-    max-width: 900vw;
+    max-width: 75vw;
 
 }
 
@@ -47,27 +47,25 @@ h1 {
 
 /* Content */
 .content {
-    background-color: lightgreen;
+    background-color: #32622f;
     padding: 10px;
+    border-radius: 20px;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 9999px) {
-    .column {
-        width: 50%;
-    }
-}
+/*!* Responsive layout - makes a two column-layout instead of four columns *!*/
+/*@media screen and (max-width: 9999px) {*/
+/*    .column {*/
+/*        width: 50%;*/
+/*    }*/
+/*}*/
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 99999px) {
     .column {
-        width: 100%;
+        width: 75%;
     }
 }
 
-.yapping {
-
-}
 
 .special-button{
     display: inline-block;
@@ -99,7 +97,7 @@ h1 {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #274f27;
     overflow-x: hidden;
     padding-top: 20px;
 }
@@ -108,7 +106,7 @@ h1 {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 15px;
-    color: #818181;
+    color: #111111;
     display: block;
 }
 
@@ -121,9 +119,11 @@ h1 {
     .sidenav a {font-size: 18px;}
 }
 .custom-button {
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
     margin-left: 0.5vw;
-    background-color: lightgreen; /* Green */
-    border: 1px solid green;
+    background-color: #267926; /* Green */
+    border: 1px solid #3c3b3c;
     color: white;
     padding: 10px;
     text-align: center;
@@ -131,4 +131,13 @@ h1 {
     cursor: pointer;
     width: 9vw;
     display: block;
+    border-radius: 5px;
+}
+hr.home-hr {
+    border: 7px solid #052300;
+   border-radius: 5px;
+}
+.images {
+    margin: 5vh 0 0 58vw;
+    width: 10vw;
 }
