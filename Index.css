@@ -5,12 +5,11 @@
 body {
     background-color: #ddffd0;
     padding: 20px;
-    font-family: Helvetica, sans-serif ;
+    font-family: Helvetica, sans-serif;
 }
-
 /* Center website */
 .main {
-    margin: auto auto auto 10vw; /* Same width as the sidebar + left position in px */
+    margin: auto auto auto auto; /* Same width as the sidebar + left position in px */
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0 10px;
     max-width: 75vw;
@@ -18,8 +17,10 @@ body {
 }
 
 h1 {
+    color: #111111;
     font-size: 50px;
     word-break: break-all;
+    /*font-family:;*/
 }
 
 .row {
@@ -47,9 +48,10 @@ h1 {
 
 /* Content */
 .content {
-    background-color: #32622f;
+    background-color: rgba(50, 98, 47, 0.47);
     padding: 10px;
     border-radius: 20px;
+    color: #ddffd0;
 }
 
 /*!* Responsive layout - makes a two column-layout instead of four columns *!*/
@@ -89,35 +91,58 @@ h1 {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
-
-.sidenav {
-    height: 100%;
-    width: 10vw;
-    position: fixed;
-    z-index: 1;
+/* The sidepanel menu */
+.sidepanel {
+    height: 250px; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #274f27;
-    overflow-x: hidden;
-    padding-top: 20px;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
 }
 
-.sidenav a {
-    padding: 6px 8px 6px 16px;
+/* The sidepanel links */
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 15px;
-    color: #111111;
+    font-size: 25px;
+    color: #818181;
     display: block;
+    transition: 0.3s;
 }
 
-.sidenav a:hover {
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
     color: #f1f1f1;
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgba(25, 79, 19, 0.21);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
 .custom-button {
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
@@ -185,9 +210,9 @@ hr.home-hr {
 }
 .images4-2 {
     margin: 5vh 0 0 68vw;
-    padding: 0 2vw  2vh 0;
+    padding: 0 2vw 2vh 0;
     width: 16vw;
     background: #3e8e41;
     border-radius: 20px;
-    transform: translate(0,-8vh);
+    transform: translate(0, -8vh);
 }

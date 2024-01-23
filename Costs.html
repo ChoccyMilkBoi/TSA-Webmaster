@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang = "en">
 <head>
     <meta charset = "UTF-8">
@@ -7,31 +7,39 @@
     <title>
         Website name - Homepage
     </title>
+    <link rel="stylesheet" href="Articles.css">
     <link rel="stylesheet" href="Index.css">
     <script defer src="Index_app.js"></script>
 </head>
 <body>
-<section class = "top-section full-screen-section" id="page1">
-    <h2>
-        Homepage title
-    </h2>
-    <p>
-        Description and yap about general idea and mission of the website
-    </p>
-</section>
-<section class = "full-screen-section first-main-section" id="page2">
-    <h2>
-        Costs
-    </h2>
-    <p>
-        Synopsis about Costs page
-    </p>
-    <a href = "Index.html">
-        <button class = "hover_Mouse rounded_Button">
-            Click for page 2
-        </button>
-    </a>
+<div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">About Green Energy</a>
+    <a href="#">Costs and pricing information</a>
+    <a href="#">Tax Saving and information</a>
+</div>
 
-</section>
+<button class="openbtn" onclick="openNav()">&#9776;</button>
+
+<!-- Page content -->
+<div class="article-main">
+    <h1 class = "title-box">
+        Learn about green energy
+    </h1>
+    <hr class = "home-hr">
+    <div class = "article-content">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eget sit amet tellus cras adipiscing enim eu. Etiam tempor orci eu lobortis. Massa tincidunt dui ut ornare lectus sit amet est. Volutpat sed cras ornare arcu dui vivamus. Fermentum et sollicitudin ac orci. Nunc faucibus a pellentesque sit amet porttitor. Vulputate dignissim suspendisse in est. Vitae et leo duis ut diam. Proin fermentum leo vel orci porta non pulvinar neque. Quisque id diam vel quam elementum pulvinar etiam non. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Enim lobortis scelerisque fermentum dui faucibus. Eget mauris pharetra et ultrices neque. Pellentesque sit amet porttitor eget dolor morbi. Sed velit dignissim sodales ut eu sem integer. A cras semper auctor neque vitae tempus quam pellentesque. In ante metus dictum at tempor commodo ullamcorper a lacus.
+        </p>
+    </div>
+    <hr class="home-hr">
+    <div class="article-content">
+
+    </div>
+    <div class = "article-banner">
+
+    </div>
+</div>
 </body>
 </html>

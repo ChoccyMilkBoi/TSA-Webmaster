@@ -12,20 +12,15 @@
     </head>
     <body>
 
-    <div class="sidenav">
-        <button class = custom-button>
-            <a href=Index.html>Home</a>
-        </button>
-        <button class = custom-button>
-            <a href=BasicInfo.html>What is Green Energy?</a>
-        </button>
-        <button class = custom-button>
-            <a href=Costs.html>Costs of Green Energy</a>
-        </button>
-        <button class = custom-button>
-            <a href=TaxRebates.html>Saving on Taxes with green energy</a>
-        </button>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About Green Energy</a>
+        <a href="#">Costs and pricing information</a>
+        <a href="#">Tax Saving and information</a>
     </div>
+
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
 <!-- MAIN (Center website) -->
 <div class="main">
 
@@ -33,7 +28,7 @@
 
     <hr class = home-hr>
     <br>
-    <h5>
+    <h5 style = "">
         Find out about how using green energy can help save the environment, and your wallet, just by following a
         few simple steps. (synopsis / abstract)
         <br>
