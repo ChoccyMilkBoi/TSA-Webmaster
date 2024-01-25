@@ -1,7 +1,7 @@
 * {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -105,7 +105,7 @@ h1 {
     background-color: rgba(17, 17, 17, 0.93); /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
-    transition: 1s; /* 0.5 second transition effect to slide in the sidepanel */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
 }
 
 /* The sidepanel links */
