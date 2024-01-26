@@ -1,5 +1,6 @@
 body {
     background-color: #A3B18A;
+    font-family: "Roboto", sans-serif;
 }
 body, html {
     height: 100%;
@@ -10,7 +11,7 @@ body, html {
     This will make the text easier to read */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.infrastructureasia.org/-/media/InfraAsia/Insights/Clean-energy/CATALYSING-CLEAN-ENERGY-PROJECTS-IN-EMERGING-ASIA---Banner.ashx?h=768&w=1920&la=en&hash=999267A1B1DB9C557280E79F404E577E");
 
-    height: 100%;
+    height: 85%;
     width: auto;
 
     /* Position and center the image to scale nicely on all screens */
@@ -27,8 +28,110 @@ body, html {
     transform: translate(-50%, -50%);
     color: white;
 }
-.main {
-    margin-top: 15vh;
+.fullscreen-section {
+    height: 75vh;
+    width : 100%;
+}
+.mini-banner {
+    background-color: #344E41;
+    height: 25%;
+}
+
+.pic-left {
+    display: flex;
+    height: inherit;
+    width: 50%;
+    float: left;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic-right {
+    display: flex;
+    height: inherit;
+    width: 50%;
+    float: left;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: #588157;
+
+}
+
+.text-left {
+    height: inherit;
+    width: 50%;
+    float: left;
+}
+
+.text-right{
+    display: flex;
+    height: inherit;
+    width: 50%;
+    float: right;
+    background-color: #588157;
+
+}
+.text-holder {
+    padding: 5% 5% 5% 5%;
+}
+
+.subheader {
+    font-size: 40px;
+}
+.triple-holder {
+    width: auto;
+    height: 87%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 2;
+}
+.triple-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+    width: 100%;
+    background-color: #344E41;
+}
+.triple-1 {
+    width: 33%;
+    height: 87%;
+    float: left;
+    background-color: #A3B18A;
+    z-index: 3;
+}
+
+.triple-2 {
+    width: 33%;
+    height: 87%;
+    float: left;
+    background-color: #588157;
+    z-index: 3;
+}
+
+.triple-3 {
+    width: 33%;
+    height: 87%;
+    float: left;
+    background-color: #3A5A40;
+    z-index: 3;
+}
+.img-back {
+    width: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.img-back {
+
+    background-image: url('https://climateaction.africa/wp-content/uploads/2023/11/Green-energy.jpg') !important;
 }
 
 /* Add a black background color to the top navigation */
