@@ -33,7 +33,7 @@ body, html {
     width : 100%;
 }
 .mini-banner {
-    background-color: #344E41;
+    background-image: linear-gradient(red, yellow);
     height: 25%;
 }
 
@@ -75,6 +75,9 @@ body, html {
 }
 .text-holder {
     padding: 5% 5% 5% 5%;
+}
+#miniheader-holder{
+
 }
 
 .subheader {
@@ -133,6 +136,11 @@ body, html {
 
     background-image: url('https://climateaction.africa/wp-content/uploads/2023/11/Green-energy.jpg') !important;
 }
+.image-fitter{
+    width: 95%;
+    height: 95%;
+    object-fit: fill;
+}
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -169,4 +177,7 @@ body, html {
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
     display: none;
+}
+#hero-button {
+
 }
