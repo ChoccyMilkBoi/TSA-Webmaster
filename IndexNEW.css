@@ -6,6 +6,9 @@ body, html {
     height: 100%;
     margin: 0;
 }
+.yapping {
+    font-size: 1.5vw;
+}
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image
     This will make the text easier to read */
@@ -199,6 +202,14 @@ body, html {
     background-size: cover;
     position: relative;
     background-image: url(SVGS/circle-scatter-haikei.svg);
+}
+
+.vert-waves-back {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-image: url(SVGS/stacked-waves-haikei2.svg);
 }
 
 /* Add a black background color to the top navigation */
